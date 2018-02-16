@@ -16,7 +16,6 @@ app.post("/register", function(req, res) {
   });
 })
 const register = (state, callback) => {
-	console.log(state);
   models.User.create(state).then((val) => {
     callback("REGISTRATION SUCCESSFUL")
   }).catch((err) => {
