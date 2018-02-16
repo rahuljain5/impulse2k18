@@ -7,7 +7,9 @@ app.use(bodyParser.urlencoded({
     extended: true
   }));
 app.use(bodyParser.json());
-
+app.get("/",function(req,res){
+	res.send("UP");
+});
 app.post("/register", function(req, res) {
     register(req.body, (val) => {
     res.send(val);
