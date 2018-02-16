@@ -2,19 +2,22 @@
 module.exports = (sequelize, Sequelize) => {
   var User = sequelize.define("User", {
    name: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
+     defaultValue: null
     },
     eventName: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
+      defaultValue: null
     },
     email: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
+      defaultValue: null
     },
     PhoneNumber: {
       type: Sequelize.STRING,
       defaultValue: null
     },
-    collegeName{
+    collegeName:{
      type: Sequelize.STRING,
       defaultValue: null
     }
