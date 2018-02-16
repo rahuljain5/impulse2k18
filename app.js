@@ -24,6 +24,6 @@ const register = (state, callback) => {
   })
 }
 
-models.sync();
+models.sequelize.sync();
  app.listen(process.env.PORT, () => console.log("Server Started at " + process.env.PORT));
 
