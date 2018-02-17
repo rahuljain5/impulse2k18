@@ -129,11 +129,11 @@ document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", event
 //Register
  function register() {
   var xhttp = new XMLHttpRequest();
-	var name =documet.getElementById("name").value;
-  var eventid = documet.getElementById("eventId").value;
-  var email = documet.getElementById("email").value;
-  var pn = documet.getElementById("pn").value;
-  var cn = documet.getElementById("cn").value;
+	var name =document.getElementById("name").value;
+  var eventid = document.getElementById("eventId").value;
+  var email = document.getElementById("email").value;
+  var pn = document.getElementById("pn").value;
+  var cn = document.getElementById("cn").value;
   xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             alert(this.responseText);
