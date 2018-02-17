@@ -116,7 +116,8 @@
   	eventname=events[1];
   else
   window.history.back();
-  document.replace("{{####}}",eventname);
+document.body.innerHTML = document.body.innerHTML.replace("{{####}}", eventname);
+  //document.replace("{{####}}",eventname);
 });
 	</script>
 
