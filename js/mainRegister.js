@@ -28,7 +28,7 @@
                 check=false;
             }
 	if(check);
-  	return;
+  	return check;
 	else
 	 event.preventDefault();
 		
