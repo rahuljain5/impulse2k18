@@ -72,7 +72,7 @@
 				</div>
 
 				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn" onlick="register();">
+					<button class="contact100-form-btn" >
 						<span>
 							Submit
 							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
@@ -105,7 +105,7 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
 	<script src="js/map-custom.js"></script>
 <!--===============================================================================================-->
-	<!--<script src="js/mainRegister.js"></script> -->
+	<script src="js/mainRegister.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
@@ -127,23 +127,7 @@
 document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", eventname);
 
 //Register
-		 function register() {
-  var xhttp = new XMLHttpRequest();
-	var name =documet.getElementById("name").value;
-  var eventid = documet.getElementById("eventId").value;
-  var email = documet.getElementById("email").value;
-  var pn = documet.getElementById("pn").value;
-  var cn = documet.getElementById("cn").value;
-  xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            alert(this.responseText);
-       }
-    };
-  xhttp.open("POST", "http://register.impulse2k18.cf/register", true);
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-//   xhttp.setRequestHeader("Access-Control-Allow-Origin","*");
-	xhttp.send("name="+name+"&eventName="+eventid+"&email="+email+"&PhoneNumber="+pn+"&collegeName="+cn); 
-}
+		
 	
 </script>
 
