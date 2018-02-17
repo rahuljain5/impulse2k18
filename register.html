@@ -111,7 +111,7 @@
 	 $(function() {
     console.log( "ready!" );
 	var eventname = "";
-	var events = window.location.split("#");
+	var events = window.location.href.split("#");
   if(events.length == 2)
   	eventname=events[1];
   else
