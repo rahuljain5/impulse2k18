@@ -139,9 +139,9 @@ document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", event
             alert(this.responseText);
        }
     };
-  xhttp.open("POST", "https://register.impulse2k18.cf/register", true);
+  xhttp.open("POST", "http://register.impulse2k18.cf/register", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.setRequestHeader("Access-Control-Allow-Origin","*");
+//   xhttp.setRequestHeader("Access-Control-Allow-Origin","*");
 	xhttp.send("name="+name+"&eventName="+eventid+"&email="+email+"&PhoneNumber="+pn+"&collegeName="+cn); 
 }
 	
