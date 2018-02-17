@@ -110,6 +110,13 @@
 	<script>
 	 $(function() {
     console.log( "ready!" );
+	var eventname = "";
+	var events = window.location.split("#");
+  if(events.length == 2)
+  	eventname=events[1];
+  else
+  window.history.back();
+  document.replace("{{####}}",eventname);
 });
 	</script>
 
