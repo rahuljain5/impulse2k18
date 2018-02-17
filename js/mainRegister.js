@@ -1,7 +1,7 @@
 
 (function ($) {
     "use strict";
-
+	
     /*==================================================================
     [ Focus Contact2 ]*/
     $('.input100').each(function(){
@@ -35,18 +35,16 @@
   var email = documet.getElementById("email").value;
   var pn = documet.getElementById("pn").value;
   var cn = documet.getElementById("cn").value;
-  xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            alert(this.responseText);
-       }
-    };
-  xhttp.open("POST", "https://register.impulse2k18.cf/register", true);
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.setRequestHeader("Access-Control-Allow-Origin","*");
-	xhttp.send("name="+name+"&eventName="+eventid+"&email="+email+"&PhoneNumber="+pn+"&collegeName="+cn); 
-    }
-        
+var obj = {
+	"name":name,"eventName":eventid,"email":email,"PhoneNumber":pn,"collegeName":cn
+}
+ $.post("http://register.impulse2k18.cf/register",
+    obj,
+    function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
     });
+}        
+});
 
 
     $('.validate-form .input100').each(function(){
