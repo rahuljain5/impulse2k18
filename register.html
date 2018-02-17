@@ -117,8 +117,6 @@
 	  gtag('config', 'UA-23581568-13');
 	</script>
 	<script>
-	 $(function() {
-    console.log( "ready!" );
 	var eventname = "";
 	var events = window.location.href.split("#");
   if(events.length == 2)
@@ -127,8 +125,6 @@
   window.history.back();
  //$("#eventId").val(eventname);
 document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", eventname);
-  //document.replace("{{####}}",eventname);
-});
 	</script>
 
 </body>
