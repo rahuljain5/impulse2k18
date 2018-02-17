@@ -27,23 +27,11 @@
                 showValidate(input[i]);
                 check=false;
             }
-        }
-    if(check)
-    {
-        var name =documet.getElementById("name").value;
-  var eventid = documet.getElementById("eventId").value;
-  var email = documet.getElementById("email").value;
-  var pn = documet.getElementById("pn").value;
-  var cn = documet.getElementById("cn").value;
-var obj = {
-	"name":name,"eventName":eventid,"email":email,"PhoneNumber":pn,"collegeName":cn
-}
- $.post("http://register.impulse2k18.cf/register",
-    obj,
-    function(data, status){
-        alert("Data: " + data + "\nStatus: " + status);
-    });
-}        
+	if(check);
+  	return;
+	else
+	 event.preventDefault();
+		
 });
 
 
