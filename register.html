@@ -116,8 +116,7 @@
   	eventname=events[1];
   else
   window.history.back();
-var eventid = document.getElementById("eventId");
-eventid.value = eventname;
+ $("#eventId").val(eventname)
 document.body.innerHTML = document.body.innerHTML.replace("{{####}}", eventname);
   //document.replace("{{####}}",eventname);
 });
