@@ -12,7 +12,7 @@ app.get("/",function(req,res){
 });
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  res.header("Access-Control-Allow-Headers", "access-control-allow-origin");
   next();
  });
 app.post("/register", function(req, res) {
