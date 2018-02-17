@@ -37,7 +37,7 @@
 		<div class="wrap-contact100">
 			<div class="contact100-form-title" style="background-image: url(img/bg-01.jpg);">
 				<span class="contact100-form-title-1">
-					Register Yourself ## for the event
+					Register Yourself {{####}} for the event
 				</span>
 
 				<span class="contact100-form-title-2">
@@ -46,6 +46,7 @@
 			</div>
 
 			<form class="contact100-form validate-form">
+					<input id="eventId" type="hidden" value="{{####}}"/>
 				<div class="wrap-input100 validate-input" data-validate="Name is required">
 					<span class="label-input100">Full Name:</span>
 					<input class="input100" type="text" name="name" placeholder="Enter full name">
@@ -105,15 +106,11 @@
 	<script src="js/map-custom.js"></script>
 <!--===============================================================================================-->
 	<script src="js/mainRegister.js"></script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-23581568-13');
+	 $(function() {
+    console.log( "ready!" );
+});
 	</script>
 
 </body>
