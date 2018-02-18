@@ -3,6 +3,8 @@ const models = require('./models');
 var express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const constant = require("./utils/constant.js");
+const mailer = require("./services/mailer.js").sendmail;
 app.use(bodyParser.urlencoded({
     extended: true
   }));
