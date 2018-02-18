@@ -3,7 +3,7 @@ const models = require('./models');
 var express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const constant = require("./utils/constant.js");
+const content = require("./utils/constant.js").content;
 const mailer = require("./services/mailer.js").sendmail;
 app.use(bodyParser.urlencoded({
     extended: true
@@ -24,6 +24,7 @@ app.post("/register", function(req, res) {
 })
 const register = (state, callback) => {
   models.User.create(state).then((val) => {
+	mailer(state.email,"Registration Successfull",content);
     callback("REGISTRATION SUCCESSFUL")
   }).catch((err) => {
     callback("REGISTRATION FAILED")
