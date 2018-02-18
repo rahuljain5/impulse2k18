@@ -45,34 +45,34 @@
 				</span>
 			</div>
 
-			<form class="contact100-form validate-form">
+			<form class="contact100-form validate-form" action="javascript:register();">
 				<input id="eventId" type="hidden" value="{{eventname}}"/>
 				<div class="wrap-input100 validate-input" data-validate="Name is required">
 					<span class="label-input100">Full Name:</span>
-					<input id="name" class="input100" type="text" name="name" placeholder="Enter full name">
+					<input id="name" class="input100" type="text" name="name" placeholder="Enter full name" required>
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 					<span class="label-input100">Email:</span>
-					<input id="email" class="input100" type="text" name="email" placeholder="Enter email addess">
+					<input id="email" class="input100" type="text" name="email" placeholder="Enter email addess" required>
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate="Phone is required">
 					<span class="label-input100">Phone:</span>
-					<input id="pn" class="input100" type="text" name="phone" placeholder="Enter phone number">
+					<input id="pn" class="input100" type="text" name="phone" placeholder="Enter phone number" required>
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate = "College name is required">
 					<span class="label-input100">College Name:</span>
-					<input id="cn" class="input100" name="college_name" placeholder="Give your college name"></input>
+					<input id="cn" class="input100" name="college_name" placeholder="Give your college name" required></input>
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn" onlick="register();">
+					<button class="contact100-form-btn" >
 						<span>
 							Submit
 							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
@@ -127,23 +127,24 @@
 document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", eventname);
 
 //Register
-		 function register() {
+ function register() {
   var xhttp = new XMLHttpRequest();
-	var name =documet.getElementById("name").value;
-  var eventid = documet.getElementById("eventId").value;
-  var email = documet.getElementById("email").value;
-  var pn = documet.getElementById("pn").value;
-  var cn = documet.getElementById("cn").value;
+	var name =document.getElementById("name").value;
+  var eventid = document.getElementById("eventId").value;
+  var email = document.getElementById("email").value;
+  var pn = document.getElementById("pn").value;
+  var cn = document.getElementById("cn").value;
   xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             alert(this.responseText);
        }
     };
-  xhttp.open("POST", "https://register.impulse2k18.cf/register", true);
+  xhttp.open("POST", "http://register.impulse2k18.cf/register", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	 xhttp.setRequestHeader("Origin","http://impulse2k18.cf");
   xhttp.setRequestHeader("Access-Control-Allow-Origin","*");
 	xhttp.send("name="+name+"&eventName="+eventid+"&email="+email+"&PhoneNumber="+pn+"&collegeName="+cn); 
-}
+}		
 	
 </script>
 

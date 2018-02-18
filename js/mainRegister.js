@@ -1,7 +1,7 @@
 
 (function ($) {
     "use strict";
-
+	
     /*==================================================================
     [ Focus Contact2 ]*/
     $('.input100').each(function(){
@@ -27,10 +27,12 @@
                 showValidate(input[i]);
                 check=false;
             }
-        }
-
-        return check;
-    });
+	if(check);
+  	return check;
+	else
+	 event.preventDefault();
+		
+});
 
 
     $('.validate-form .input100').each(function(){
