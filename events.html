@@ -201,13 +201,14 @@
 
 </body>
 <script>
-	var eventname = "";
+	var eventnames = {coding: "Coding", itquiz: "IT Quiz", web: "Web Designing", debate: "Debate", etquiz: "Entertainment Quiz", photo: "Photography", treasure: "Treasure Hunt", movie: "Movie Making", kannada: "Namma Bhaashe Kannada", gaming: "Gaming", footloose: "FootLoose", buzzinga: "Buzzinga"};
+	var eventtag = "";
 	var events = window.location.href.split("#");
 	if (events.length == 2)
-		eventname = events[1];
+		eventtag = events[1];
 	else
 		window.history.back();
-	document.body.innerHTML = document.body.innerHTML.replace('{{####}}', eventname);
-	document.getElementById('tab_title').innerHTML = eventname;
+	document.body.innerHTML = document.body.innerHTML.replace('{{####}}', eventnames[eventtag]);
+	document.getElementById('tab_title').innerHTML = eventnames[eventtag];
 </script>
 </html>
