@@ -11,3 +11,4 @@ const mailcontent = `<!DOCTYPE html><html><head>
 </div>
   </body>
 </html>`;
+exports.content = mailcontent;
