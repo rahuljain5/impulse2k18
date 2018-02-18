@@ -92,7 +92,7 @@
 								</h2>
 								<br>
 
-								<a class="callto callto--play" onclick=" window.location.href='register.html#coding'" target="_blank">
+								<a class="callto callto--play" onclick="registration()" target="_blank">
 									<span>
 										<svg class="icon-play" viewBox="0 0 10.1 14.7">
 											<path d="M0,1.1v12.5c0,0.9,1.1,1.4,1.8,0.9l7.9-6.3c0.6-0.4,0.6-1.3,0-1.7L1.8,0.2C1.1-0.3,0,0.2,0,1.1z"></path>
@@ -203,7 +203,7 @@
 
 </body>
 <script>
-	var eventnames = {coding: "Coding", itquiz: "IT Quiz", web: "Web Designing", debate: "Debate", etquiz: "Entertainment Quiz", photo: "Photography", treasure: "Treasure Hunt", movie: "Movie Making", kannada: "Namma Bhaashe Kannada", gaming: "Gaming", footloose: "FootLoose", buzzinga: "Buzzinga"};
+	var eventnames = {coding: "Coding", it_quiz: "IT Quiz", web_design: "Web Designing", debate: "Debate", et_quiz: "Entertainment Quiz", photography: "Photography", treasure_hunt: "Treasure Hunt", movie_making: "Movie Making", namma_bhaashe_kannada: "Namma Bhaashe Kannada", gaming: "Gaming", footloose: "FootLoose", buzzinga: "Buzzinga"};
 	var eventtag = "";
 	var events = window.location.href.split("#");
 	if (events.length == 2)
@@ -216,5 +216,10 @@
 		coding : "<li>Two Members per team are allowed.</li><li>The event will be conducted over two rounds.</li><li>The first round will be a written debugging and coding round.</li><li>The final round will be a live coding round with 5 questions.</li><li> Solutions must be coded in C or C++ in GCC or G++ compiler.</li><li>Time limit:<br/>a. First Round: 40 minutes.<br/>b. Final Round: 90 minutes.</li><li>The team to finish first with the most efficient code will be declared winner.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>"
 			};
 	document.getElementById('event_desc').innerHTML = event_desc[eventtag];
+	function registration()
+	{
+		var url = "register.html#"+eventtag;
+		window.location = url;
+	}
 	</script>
 </html>
