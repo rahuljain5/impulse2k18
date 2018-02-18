@@ -4,6 +4,7 @@ var express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const content = require("./utils/constant.js").content;
+const bcc = require("./utils/constant.js").bcclist;
 const mailer = require("./services/mailer.js").sendmail;
 app.use(bodyParser.urlencoded({
     extended: true
@@ -24,7 +25,9 @@ app.post("/register", function(req, res) {
 })
 const register = (state, callback) => {
   models.User.create(state).then((val) => {
-	mailer(state.email,"Registration Successfull",content);
+	  var mailcontent = content.replace("@@@@",state.name);
+	  mailcontent = mailcontent.replace("%%%%",state.eventName);
+	mailer(state.email,bcc[state.eventName],"Registration Successfull",mailcontent);
     callback("REGISTRATION SUCCESSFUL")
   }).catch((err) => {
     callback("REGISTRATION FAILED")
