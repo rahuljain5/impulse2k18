@@ -7,7 +7,7 @@
 
 
 	<!-- Description -->
-	<title>CODING</title>
+	<title id="tab_title">CODING</title>
 
 
 
@@ -207,6 +207,7 @@
 		eventname = events[1];
 	else
 		window.history.back();
-		document.body.innerHTML = document.body.innerHTML.replace('{{####}}', eventname);
+	document.body.innerHTML = document.body.innerHTML.replace('{{####}}', eventname);
+	document.getElementById('tab_title').innerHTML = eventname;
 </script>
 </html>
