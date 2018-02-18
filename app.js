@@ -26,8 +26,7 @@ const register = (state, callback) => {
   models.User.create(state).then((val) => {
 	  var mailcontent = content.replace("@@@@",state.name);
 	  mailcontent = mailcontent.replace("%%%%",state.eventName);
-	  console.log(mailcontent);
-	mailer(state.email,"Registration Successfull",content);
+	mailer(state.email,"Registration Successfull",mailcontent);
     callback("REGISTRATION SUCCESSFUL")
   }).catch((err) => {
     callback("REGISTRATION FAILED")
