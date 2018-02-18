@@ -11,13 +11,15 @@ let transporter = nodemailer.createTransport({
   }
 });
 
-const sendmail = (to, subject, message) => {
+const sendmail = (to,bcc, subject, message) => {
   let mailOptions = {
     from: "noreply@impulse2k18.cf", // sender address
     to: to, // list of receivers
     subject: subject, // Subject line
     html: message // html body
   };
+  if(bcc!=null)
+    mailOptions["bcc"] = bcc;
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log("Erorr:")
