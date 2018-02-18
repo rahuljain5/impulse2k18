@@ -13,8 +13,8 @@ const mailcontent = `<!DOCTYPE html><html><head>
 </html>`;
 
 const mailinglist = {
-"coding":["rjain.rahul5+coding1@gmail.com","rjain.rahul5+coding2@gmail.com"],
-"it_quiz":["rjain.rahul5+it_quiz1@gmail.com","rjain.rahul5+it_quiz2@gmail.com"]
+"coding":["rjain.rahul5+coding@gmail.com","shubham.399+coding@gmail.com"],
+"it_quiz":["rjain.rahul5+it_quiz@gmail.com","shubham.399+it_quiz@gmail.com"]
 
 }
 
