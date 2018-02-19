@@ -65,7 +65,7 @@
 				<h5>Follow Us</h5>
 				<ul id="social-nav">
 					<li>
-						<a class="link__fb" href="#" target="_blank">Facebook
+						<a class="link__fb" href="https://www.facebook.com/toce.impulse/" target="_blank">Facebook
 							<svg class="icon-fb" viewBox="0 0 20 20">
 								<path d="M12.2,4h2.1V0.7h-2.8c-4,0-3.9,3.1-3.9,3.6c0,0.5,0,2.5,0,2.5H5.7V10h1.9v9.3h3.8V10H14c0,0,0.2-1.5,0.4-3.1c-0.3,0-2.9,0-2.9,0s0-1.8,0-2.1C11.4,4.4,11.8,4,12.2,4z"></path>
 							</svg>
@@ -141,7 +141,7 @@
 								<path d="M16.7,9.7c-3.9,0-7,3.1-7,7c0,3.9,3.1,7,7,7c3.9,0,7-3.1,7-7C23.7,12.9,20.6,9.7,16.7,9.7z M19.7,16.7c0,1.7-1.4,3-3,3c-1.7,0-3-1.4-3-3c0-1.7,1.4-3,3-3C18.4,13.7,19.7,15.1,19.7,16.7z"></path>
 								<path d="M16.7,0C16.7,0,16.7,0,16.7,0C12.3,0,8.1,1.7,4.9,4.9C1.7,8.1,0,12.3,0,16.7c0,13.6,14.9,25,15.5,25.5c0.3,0.3,0.8,0.4,1.2,0.4c0.5,0,0.9-0.2,1.2-0.4c0.6-0.5,15.5-12.5,15.5-25.4C33.5,7.5,26,0,16.7,0z M29.5,16.7c0,9.1-9.4,18.2-12.8,21.3C13.3,35.1,4,26.2,4,16.7c0-3.4,1.3-6.6,3.7-9c2.4-2.4,5.6-3.7,9-3.7C23.8,4,29.5,9.7,29.5,16.7z"></path>
 							</svg> Event held at:
-							<a>The Oxford College of Engineering, bangalore</a>
+							<a href="https://goo.gl/maps/68kecPXZQaM2" target="_blank">The Oxford College of Engineering, bangalore</a>
 						</aside>
 
 
@@ -202,20 +202,17 @@
 			</script> -->
 
 </body>
+<script src="./js/event_data.js"></script>
 <script>
-	var eventnames = {coding: "Coding", it_quiz: "IT Quiz", web_design: "Web Designing", debate: "Debate", et_quiz: "Entertainment Quiz", photography: "Photography", treasure_hunt: "Treasure Hunt", movie_making: "Movie Making", namma_bhaashe_kannada: "Namma Bhaashe Kannada", gaming: "Gaming", footloose: "FootLoose", buzzinga: "Buzzinga"};
 	var eventtag = "";
 	var events = window.location.href.split("#");
 	if (events.length == 2)
 		eventtag = events[1];
 	else
 		window.history.back();
-	document.body.innerHTML = document.body.innerHTML.replace('{{####}}', eventnames[eventtag]);
-	document.getElementById('tab_title').innerHTML = eventnames[eventtag];
-	var event_desc = {
-		coding : "<li>Two Members per team are allowed.</li><li>The event will be conducted over two rounds.</li><li>The first round will be a written debugging and coding round.</li><li>The final round will be a live coding round with 5 questions.</li><li> Solutions must be coded in C or C++ in GCC or G++ compiler.</li><li>Time limit:<br/>a. First Round: 40 minutes.<br/>b. Final Round: 90 minutes.</li><li>The team to finish first with the most efficient code will be declared winner.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>"
-			};
-	document.getElementById('event_desc').innerHTML = event_desc[eventtag];
+	document.body.innerHTML = document.body.innerHTML.replace('{{####}}', eventname_desc[eventtag].name);
+	document.getElementById('tab_title').innerHTML = eventname_desc[eventtag].name;
+	document.getElementById('event_desc').innerHTML = eventname_desc[eventtag].desc;
 	function registration()
 	{
 		var url = "register.html#"+eventtag;

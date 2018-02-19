@@ -126,7 +126,7 @@
 		window.history.back();
 	// document.body.innerHTML = document.body.innerHTML.replace('{{####}}', eventnames[eventtag]);
 	 $("#eventId").val(eventnames[eventtag]);
-	document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", eventnames[eventtag]);
+document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", eventnames[eventtag]);
 
 //Register
  function register() {
@@ -138,7 +138,8 @@
   var cn = document.getElementById("cn").value;
   xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            alert(this.responseText);
+			alert(this.responseText);
+			window.location = "home.html";
        }
     };
   xhttp.open("POST", "http://register.impulse2k18.cf/register", true);

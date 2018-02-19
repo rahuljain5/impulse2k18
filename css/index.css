@@ -525,7 +525,7 @@ body.fb_hidden {
         opacity: .8;
         transform: scale(1.03, 1.03)
     }
-    90 {
+    90% {
         opacity: .9
     }
     100% {
