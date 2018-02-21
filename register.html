@@ -45,8 +45,8 @@
 				</span>
 			</div>
 
-			<form class="contact100-form validate-form" name="registration" netlify>
-				<input id="eventId" type="hidden" value="{{eventname}}"/>
+			<form class="contact100-form validate-form" name="registration" id="reg-form" netlify>
+				<input id="eventId" name="eventName" type="hidden" value="{{eventname}}"/>
 				<div class="wrap-input100 validate-input" data-validate="Name is required">
 					<span class="label-input100">Full Name:</span>
 					<input id="name" class="input100" type="text" name="name" placeholder="Enter full name" required>
@@ -107,16 +107,7 @@
 <!--===============================================================================================-->
 	<script src="js/mainRegister.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-23581568-13');
-	</script>
-	<script>
+<script>
 	var eventnames = {coding: "Coding", it_quiz: "IT Quiz", web_design: "Web Designing", debate: "Debate", et_quiz: "Entertainment Quiz", photography: "Photography", treasure_hunt: "Treasure Hunt", movie_making: "Movie Making", namma_bhaashe_kannada: "Namma Bhaashe Kannada", gaming: "Gaming", footloose: "FootLoose", buzzinga: "Buzzinga"};
 	var eventtag = "";
 	var events = window.location.href.split("#");
@@ -130,23 +121,31 @@ document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", event
 
 //Register
  function register() {
-  var xhttp = new XMLHttpRequest();
+//   var xhttp = new XMLHttpRequest();
 	var name =document.getElementById("name").value;
   var eventid = document.getElementById("eventId").value;
   var email = document.getElementById("email").value;
   var pn = document.getElementById("pn").value;
   var cn = document.getElementById("cn").value;
-  xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-			alert(this.responseText);
-			window.location = "home.html";
-       }
-    };
-  xhttp.open("POST", "https://register.impulse2k18.cf/register", true);
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	//  xhttp.setRequestHeader("Origin","https://impulse2k18.tk");
-  xhttp.setRequestHeader("Access-Control-Allow-Origin","*");
-	xhttp.send("name="+name+"&eventName="+eventid+"&email="+email+"&PhoneNumber="+pn+"&collegeName="+cn); 
+  $("#reg-form").submit(function(e){
+	e.preventDefault();
+
+var $form = $(this);
+$.post($form.attr("action"), $form.serialize()).then(function() {
+  alert("Thank you!");
+});
+});
+//   xhttp.onreadystatechange = function() {
+//         if (this.readyState == 4 && this.status == 200) {
+// 			alert(this.responseText);
+// 			window.location = "home.html";
+//        }
+//     };
+//   xhttp.open("POST", "https://register.impulse2k18.cf/register", true);
+//   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+// 	//  xhttp.setRequestHeader("Origin","https://impulse2k18.tk");
+//   xhttp.setRequestHeader("Access-Control-Allow-Origin","*");
+// 	xhttp.send("name="+name+"&eventName="+eventid+"&email="+email+"&PhoneNumber="+pn+"&collegeName="+cn); 
 }		
 	
 </script>
