@@ -45,7 +45,7 @@
 				</span>
 			</div>
 
-			<form class="contact100-form validate-form" name="registration" action="javascript:register()" netlify>
+			<form class="contact100-form validate-form" name="registration" id="reg-form" action="javascript:register()" netlify>
 				<input id="eventId" name="eventName" type="hidden" value="{{eventname}}"/>
 				<div class="wrap-input100 validate-input" data-validate="Name is required">
 					<span class="label-input100">Full Name:</span>
@@ -128,9 +128,10 @@ document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", event
    var cn = document.getElementById("cn").value;
    xhttp.open("POST", "https://register.impulse2k18.tk/register", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xhttp.setRequestHeader("Origin","https://impulse2k18.tk");
+	// xhttp.setRequestHeader("Origin","https://impulse2k18.tk");
   xhttp.setRequestHeader("Access-Control-Allow-Origin","*");
 	xhttp.send("name="+name+"&eventName="+eventid+"&email="+email+"&PhoneNumber="+pn+"&collegeName="+cn); 
+	document.getElementById('reg-form').submit();
 }		
 	
 </script>
