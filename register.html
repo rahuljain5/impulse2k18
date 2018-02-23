@@ -127,13 +127,17 @@ document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", event
    var pn = document.getElementById("pn").value;
    var cn = document.getElementById("cn").value;
    xhttp.open("POST", "http://register.impulse2k18.tk/register", true);
+	 xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+	  console.log(this.responseText);
+    alert(this.responseText);
+  }
+};
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	//xhttp.setRequestHeader("Origin","http://impulse2k18.tk");
   xhttp.setRequestHeader("Access-Control-Allow-Origin","*");
 	xhttp.send("name="+name+"&eventName="+eventid+"&email="+email+"&PhoneNumber="+pn+"&collegeName="+cn); 
-	if (this.readyState == 4 && this.status == 200) {
-	 alert("Succesfull");
-  }
+	
 
 	document.getElementById('reg-form').submit();
 }		
