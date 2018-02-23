@@ -119,6 +119,15 @@
 document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", eventnames[eventtag]);
 
 //Register
+	$("#reg-form").submit(function(e) {
+  e.preventDefault();
+
+  var $form = $(this);
+		register();
+  $.post($form.attr("action"), $form.serialize()).then(function() {
+    alert("Thank you!");
+  });
+});
  function register() {
 	var xhttp = new XMLHttpRequest();
  	var name =document.getElementById("name").value;
