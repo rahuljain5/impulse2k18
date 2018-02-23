@@ -127,7 +127,6 @@ document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", event
 		register();
   $.post($form.attr("action"), $form.serialize()).then(function() {
     alert("Thank you!");
-	window.location = 'home.html';
   });
 });
  function register() {
