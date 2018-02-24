@@ -43,21 +43,21 @@
 		<header id="header" class="noselect">
 			<div class="header__wrapper">
 				<h1 class="logo">
-					<img src="./img/logo.png"  height="50px" width="50px">
+					<img src="./img/logo.png" onclick="window.location='home.html'" height="50px" width="50px">
 					<a href="home.html" data-dest="home">Impulse 2K18</a>
 				</h1>
 				<nav id="main-nav">
 					<ul>
-						<li class="active">
-							<a href="home.html" data-dest="home" class="current">Events</a>
-						</li>
 						<li>
-							<a href="video.html" >Trailer</a>
+							<a href="home.html" data-dest="home" class="current">Events</a>
 						</li>
 						<li>
 							<a href="contactus.html" data-dest="contact">Contact</a>
 						</li>
-				
+						<li>
+								<a href="video.html" >Trailer</a>
+							</li>
+					
 						<li>
 							<a href="gallery.html">Impulse 2K17</a>
 						</li>
@@ -92,7 +92,7 @@
 						<div class="session-hero__wrapper">
 							<div class="session-hero__info">
 								<h2 class="session-hero__title">
-									<span>{{####}}</span>
+									<span style="background:rgba(0,0,0,0.7)">{{####}}</span >
 								</h2>
 								<br>
 
@@ -105,11 +105,11 @@
 								</a>
 							</div>
 
-							<svg class="hero__illu">
+							<!-- <svg class="hero__illu">
 								<defs>
 									<clippath id="mask-billions" x="0" y="0" width="100%" height="100%">
 										<text class="hero__title big" x="-16%" y="100%">
-											<\>
+											
 										</text>
 									</clippath>
 								</defs>
@@ -117,24 +117,24 @@
 								<image class="offset-left" xlink:href="/img/hero.jpg" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMinYMin slice"
 								 clip-path="url(#mask-billions)"></image>
 								<rect class="hero__shader offset-left" x="0" y="0" width="100%" height="100%" fill="#102f80" clip-path="url(#mask-billions)"></rect>
-							</svg>
+							</svg> -->
 
-							<div class="hero__bg-ctn" style="background-image: linear-gradient(45deg, #280c5b 15%, #00b4ff 70%);">
-								<div class="hero__bg offset-left" style="background-image: url(&#39;/img/hero.jpg&#39;)"></div>
+							<div class="hero__bg-ctn" id="background-img" style="background-image: linear-gradient(45deg, #280c5b 15%, #00b4ff 70%); background-size:cover;">
+								<!-- <div item-height="100%" item-width="100%" style=" background: rgba(0, 0, 0, 0.4);"></div> -->
+								<!-- <div class="hero__bg offset-left" style="background-image: url(&#39;/img/hero.jpg&#39;)"></div> -->
 							</div>
 
 						</div>
-
+						
 						<div class="hero__mask-ghost-ctn" aria-hidden="true" style="top: 0%;">
 							<span class="hero__mask-strut"></span>
-							<span class="hero__mask-ghost big" style="text-indent: -16%">Coding</span>
+							<span class="hero__mask-ghost big" style="text-indent: -16%; ">Coding</span>
 						</div>
-					</section>
-
-
-
+					</section> 
 					<section id="intro--billions" class="session-intro ctn">
+							
 						<p class="session-intro__hat">Event Rules and Details</p>
+						<h3 style="color:red;">Registration Fee: <span id="event_fees"></span></h3>
 						<ul id="event_desc">
 							
 						</ul>
@@ -174,6 +174,8 @@
 	document.body.innerHTML = document.body.innerHTML.replace('{{####}}', eventname_desc[eventtag].name);
 	document.getElementById('tab_title').innerHTML = eventname_desc[eventtag].name;
 	document.getElementById('event_desc').innerHTML = eventname_desc[eventtag].desc;
+	document.getElementById('event_fees').innerHTML = eventname_desc[eventtag].fee;
+	document.getElementById('background-img').style.backgroundImage = "url('./img/"+eventname_desc[eventtag].img+"')";
 	function registration()
 	{
 		var url = "register.html#"+eventtag;

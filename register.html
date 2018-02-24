@@ -24,7 +24,7 @@
 	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
 
 <!--===============================================================================================-->
 </head>
@@ -46,8 +46,7 @@
 			</div>
 
 			<form class="contact100-form validate-form" name="registration" id="reg-form" netlify>
-				<p style="display:none;">
-				<input id="eventId" name="eventName" type="text" value="{{eventname}}"/></p>
+				<input id="eventId" name="eventName" type="hidden" value="{{eventname}}"/>
 				<div class="wrap-input100 validate-input" data-validate="Name is required">
 					<span class="label-input100">Full Name:</span>
 					<input id="name" class="input100" type="text" name="name" placeholder="Enter full name" required>
@@ -126,7 +125,8 @@ document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", event
   var $form = $(this);
 		register();
   $.post($form.attr("action"), $form.serialize()).then(function() {
-    alert("Thank you!");
+    alert("Thank you! Your registration has been recorded");
+	window.location = 'home.html';
   });
 });
  function register() {
