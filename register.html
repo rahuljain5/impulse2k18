@@ -110,13 +110,12 @@
 	var eventnames = {coding: "Coding", it_quiz: "IT Quiz", web_design: "Web Designing", debate: "Debate", et_quiz: "Entertainment Quiz", photography: "Photography", treasure_hunt: "Treasure Hunt", movie_making: "Movie Making", namma_bhaashe_kannada: "Namma Bhaashe Kannada", gaming: "Gaming", footloose: "FootLoose", buzzinga: "Buzzinga"};
 	var eventtag = "";
 	var events = window.location.href.split("#");
-	if (events.length == 2)
+	if (events.length == 2 && (events[1] in eventnames))
 		eventtag = events[1];
 	else
 		window.history.back();
-	// document.body.innerHTML = document.body.innerHTML.replace('{{####}}', eventnames[eventtag]);
 	 $("#eventId").val(eventnames[eventtag]);
-document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", eventnames[eventtag]);
+	document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", eventnames[eventtag]);
 
 //Register
 	$("#reg-form").submit(function(e) {
