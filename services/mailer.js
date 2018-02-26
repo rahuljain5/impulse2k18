@@ -13,7 +13,7 @@ let transporter = nodemailer.createTransport({
 
 const sendmail = (to,bcc, subject, message) => {
   let mailOptions = {
-    from: "noreply@impulse2k18.cf", // sender address
+    from: "noreply@impulse2k18.in", // sender address
     to: to, // list of receivers
     subject: subject, // Subject line
     html: message // html body
