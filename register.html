@@ -45,7 +45,7 @@
 				</span>
 			</div>
 
-			<form class="contact100-form validate-form" name="registration" id="reg-form" netlify>
+			<form class="contact100-form validate-form" name="registration" id="reg-form" action="javascript:register();"
 				<input id="eventId" name="eventName" type="hidden" value="{{eventname}}"/>
 				<div class="wrap-input100 validate-input" data-validate="Name is required">
 					<span class="label-input100">Full Name:</span>
@@ -118,16 +118,16 @@
 	document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", eventnames[eventtag]);
 
 //Register
-	$("#reg-form").submit(function(e) {
-  e.preventDefault();
+// 	$("#reg-form").submit(function(e) {
+//   e.preventDefault();
 
-  var $form = $(this);
-		register();
-  $.post($form.attr("action"), $form.serialize()).then(function() {
-    alert("Thank you! Your registration has been recorded");
-	window.location = 'home.html';
-  });
-});
+//   var $form = $(this);
+// 		register();
+//   $.post($form.attr("action"), $form.serialize()).then(function() {
+//     alert("Thank you! Your registration has been recorded");
+// 	window.location = 'home.html';
+//   });
+// });
  function register() {
 	var xhttp = new XMLHttpRequest();
  	var name =document.getElementById("name").value;
@@ -135,14 +135,14 @@
    var email = document.getElementById("email").value;
    var pn = document.getElementById("pn").value;
    var cn = document.getElementById("cn").value;
-   xhttp.open("POST", "http://register.impulse2k18.tk/register", true);
+   xhttp.open("POST", "http://register.impulse2k18.in/register", true);
 	 xhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
 	  console.log(this.responseText);//Need to wait till the server req is completed else it is sending in complete req so heroku is not geting complete things
   }
 };
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	//xhttp.setRequestHeader("Origin","http://impulse2k18.tk");
+	xhttp.setRequestHeader("Origin","http://impulse2k18.in");
   xhttp.setRequestHeader("Access-Control-Allow-Origin","*");
 	xhttp.send("name="+name+"&eventName="+eventid+"&email="+email+"&PhoneNumber="+pn+"&collegeName="+cn); 
 }		
