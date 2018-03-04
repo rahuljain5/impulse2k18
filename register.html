@@ -45,7 +45,7 @@
 				</span>
 			</div>
 
-			<form class="contact100-form validate-form" name="registration" id="reg-form" netlify>
+			<form class="contact100-form validate-form" name="registration" id="reg-form" action="javascript:register();"
 				<input id="eventId" name="eventName" type="hidden" value="{{eventname}}"/>
 				<div class="wrap-input100 validate-input" data-validate="Name is required">
 					<span class="label-input100">Full Name:</span>
@@ -105,29 +105,29 @@
 	<script src="js/map-custom.js"></script>
 <!--===============================================================================================-->
 	<script src="js/mainRegister.js"></script>
-
+	<script src="./js/event_data.js"></script>
 <script>
-	var eventnames = {coding: "Coding", it_quiz: "IT Quiz", web_design: "Web Designing", debate: "Debate", et_quiz: "Entertainment Quiz", photography: "Photography", treasure_hunt: "Treasure Hunt", movie_making: "Movie Making", namma_bhaashe_kannada: "Namma Bhaashe Kannada", gaming: "Gaming", footloose: "FootLoose", buzzinga: "Buzzinga"};
+	// var eventnames = {coding: "Coding", it_quiz: "IT Quiz", web_design: "Web Designing", debate: "Debate", et_quiz: "Entertainment Quiz", photography: "Photography", treasure_hunt: "Treasure Hunt", movie_making: "Movie Making", namma_bhaashe_kannada: "Namma Bhaashe Kannada", gaming: "Gaming", footloose: "FootLoose", buzzinga: "Buzzinga"};
 	var eventtag = "";
 	var events = window.location.href.split("#");
-	if (events.length == 2 && (events[1] in eventnames))
+	if (events.length == 2 && (events[1] in eventname_desc))
 		eventtag = events[1];
 	else
-		window.history.back();
-	 $("#eventId").val(eventnames[eventtag]);
-	document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", eventnames[eventtag]);
+		window.history.back();document.write(eventname_desc[eventtag].name);
+	 $("#eventId").val(eventname_desc[eventtag].name);
+	document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", eventname_desc[eventtag].name);
 
 //Register
-	$("#reg-form").submit(function(e) {
-  e.preventDefault();
+// 	$("#reg-form").submit(function(e) {
+//   e.preventDefault();
 
-  var $form = $(this);
-		register();
-  $.post($form.attr("action"), $form.serialize()).then(function() {
-    alert("Thank you! Your registration has been recorded");
-	window.location = 'home.html';
-  });
-});
+//   var $form = $(this);
+// 		register();
+//   $.post($form.attr("action"), $form.serialize()).then(function() {
+//     alert("Thank you! Your registration has been recorded");
+// 	window.location = 'home.html';
+//   });
+// });
  function register() {
 	var xhttp = new XMLHttpRequest();
  	var name =document.getElementById("name").value;
@@ -135,16 +135,18 @@
    var email = document.getElementById("email").value;
    var pn = document.getElementById("pn").value;
    var cn = document.getElementById("cn").value;
-   xhttp.open("POST", "http://register.impulse2k18.tk/register", true);
+   xhttp.open("POST", "http://register.impulse2k18.in/register", true);
 	 xhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
 	  console.log(this.responseText);//Need to wait till the server req is completed else it is sending in complete req so heroku is not geting complete things
   }
 };
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	//xhttp.setRequestHeader("Origin","http://impulse2k18.tk");
+	xhttp.setRequestHeader("Origin","http://impulse2k18.in");
   xhttp.setRequestHeader("Access-Control-Allow-Origin","*");
-	xhttp.send("name="+name+"&eventName="+eventid+"&email="+email+"&PhoneNumber="+pn+"&collegeName="+cn); 
+	xhttp.send("name="+name+"&eventName="+eventid+"&email="+email+"&PhoneNumber="+pn+"&collegeName="+cn);
+	alert("Thank you! Your Registration has been Recorded!"); 
+	window.location = 'home.html';
 }		
 	
 </script>
