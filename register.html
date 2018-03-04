@@ -130,19 +130,28 @@
 // });
  function register() {
 	var xhttp = new XMLHttpRequest();
+	 var events = window.location.href.split("#");
+	if (events.length == 2 && (events[1] in eventname_desc))
+		eventtag = events[1];
  	var name =document.getElementById("name").value;
-   var eventid = document.getElementById("eventId").value;
+   var eventid = eventname_desc[eventtag].name;
    var email = document.getElementById("email").value;
    var pn = document.getElementById("pn").value;
    var cn = document.getElementById("cn").value;
+	 if(window.location.href.includes(".in"))
    xhttp.open("POST", "http://register.impulse2k18.in/register", true);
+	 else
+		xhttp.open("POST", "http://register.impulse2k18.cf/register", true); 
 	 xhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
 	  console.log(this.responseText);//Need to wait till the server req is completed else it is sending in complete req so heroku is not geting complete things
   }
 };
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	 if(window.location.href.includes(".in"))
 	xhttp.setRequestHeader("Origin","http://impulse2k18.in");
+	 else
+		 xhttp.setRequestHeader("Origin","http://impulse2k18.cf");
   xhttp.setRequestHeader("Access-Control-Allow-Origin","*");
 	xhttp.send("name="+name+"&eventName="+eventid+"&email="+email+"&PhoneNumber="+pn+"&collegeName="+cn);
 	alert("Thank you! Your Registration has been Recorded!"); 

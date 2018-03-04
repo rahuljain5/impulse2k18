@@ -2,7 +2,7 @@ var eventname_desc = {
     gear_up: {
         name: "Gear Up!",
         desc: "<li>This is a solo event</li><li>Round -1 Objective, Fun, Aptitude test</li><li>Round-2: Group discussion in front of Professionals that is called turn coat     •Round-3: \"Ship Wreck\"- we make ship to sink and you have to save it. App God\"-Bc Eminem of technology & showcase your app talent.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Decision of the judge must be respected and is FINAL.</li>",
-        img: "img/gaming.jpg",
+        img: "gaming.jpg",
         fee: "50",
         coordinator: " Anshu Agarwal- +91 9901652821<br/>Sheza Ilussian - +91 9611861490" 
     },
