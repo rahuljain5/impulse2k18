@@ -55,13 +55,13 @@
 
 				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 					<span class="label-input100">Email:</span>
-					<input id="email" class="input100" type="text" name="email" placeholder="Enter email addess" required>
+					<input id="email" class="input100" type="email" name="email" placeholder="Enter email addess" required>
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate="Phone is required">
 					<span class="label-input100">Phone:</span>
-					<input id="pn" class="input100" type="text" name="phone" placeholder="Enter phone number" required>
+					<input id="pn" class="input100" type="phone" name="phone" placeholder="Enter phone number" required>
 					<span class="focus-input100"></span>
 				</div>
 
@@ -105,17 +105,17 @@
 	<script src="js/map-custom.js"></script>
 <!--===============================================================================================-->
 	<script src="js/mainRegister.js"></script>
-
+	<script src="./js/event_data.js"></script>
 <script>
-	var eventnames = {coding: "Coding", it_quiz: "IT Quiz", web_design: "Web Designing", debate: "Debate", et_quiz: "Entertainment Quiz", photography: "Photography", treasure_hunt: "Treasure Hunt", movie_making: "Movie Making", namma_bhaashe_kannada: "Namma Bhaashe Kannada", gaming: "Gaming", footloose: "FootLoose", buzzinga: "Buzzinga"};
+	// var eventnames = {coding: "Coding", it_quiz: "IT Quiz", web_design: "Web Designing", debate: "Debate", et_quiz: "Entertainment Quiz", photography: "Photography", treasure_hunt: "Treasure Hunt", movie_making: "Movie Making", namma_bhaashe_kannada: "Namma Bhaashe Kannada", gaming: "Gaming", footloose: "FootLoose", buzzinga: "Buzzinga"};
 	var eventtag = "";
 	var events = window.location.href.split("#");
-	if (events.length == 2 && (events[1] in eventnames))
+	if (events.length == 2 && (events[1] in eventname_desc))
 		eventtag = events[1];
 	else
-		window.history.back();
-	 $("#eventId").val(eventnames[eventtag]);
-	document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", eventnames[eventtag]);
+		window.history.back();document.write(eventname_desc[eventtag].name);
+	 $("#eventId").val(eventname_desc[eventtag].name);
+	document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", eventname_desc[eventtag].name);
 
 //Register
 // 	$("#reg-form").submit(function(e) {
@@ -144,7 +144,9 @@
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhttp.setRequestHeader("Origin","http://impulse2k18.in");
   xhttp.setRequestHeader("Access-Control-Allow-Origin","*");
-	xhttp.send("name="+name+"&eventName="+eventid+"&email="+email+"&PhoneNumber="+pn+"&collegeName="+cn); 
+	xhttp.send("name="+name+"&eventName="+eventid+"&email="+email+"&PhoneNumber="+pn+"&collegeName="+cn);
+	alert("Thank you! Your Registration has been Recorded!"); 
+	window.location = 'home.html';
 }		
 	
 </script>

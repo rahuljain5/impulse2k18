@@ -120,11 +120,13 @@
 					<section id="intro--billions" class="session-intro ctn">
 							
 						<p class="session-intro__hat">Event Rules and Details</p>
-						<h3 style="color:blue;">Registration Fee: <span id="event_fees"></span></h3>
-						<ul id="event_desc">
+						<h3 style="color:blue;">Registration Fee: <span id="event_fees"></span></h3><br/>
+						
+						<h3> Participants are expected to strictly abide by the <a href="coc.pdf"><u>CODE OF CONDUCT</u></a></h3>
+						<ul id="event_desc" style="color:darkolivegreen;">
 							
 						</ul>
-						 
+						<h3 style="color: darkgreen ;">Contact: <span id="coordinator"></span></h3> 
 
 						<aside class="location">
 							<svg class="icon-spot" viewBox="0 0 33.5 42.6">
@@ -161,6 +163,7 @@
 	document.getElementById('tab_title').innerHTML = eventname_desc[eventtag].name;
 	document.getElementById('event_desc').innerHTML = eventname_desc[eventtag].desc;
 	document.getElementById('event_fees').innerHTML = eventname_desc[eventtag].fee;
+	document.getElementById('coordinator').innerHTML = eventname_desc[eventtag].coordinator;
 	document.getElementById('background-img').style.backgroundImage = "url('./img/"+eventname_desc[eventtag].img+"')";
 	function registration()
 	{
