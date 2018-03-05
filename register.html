@@ -135,24 +135,34 @@
    var email = document.getElementById("email").value;
    var pn = document.getElementById("pn").value;
    var cn = document.getElementById("cn").value;
+	 console.log(eventid)
+	 var xhttp = new XMLHttpRequest();
+	 	var url = "http://register.impulse2k18.cf/register";
+	 var origin = "http://impulse2k18.cf"
 	 if(window.location.href.includes(".in"))
-   xhttp.open("POST", "http://register.impulse2k18.in/register", true);
-	 else
-		xhttp.open("POST", "http://register.impulse2k18.cf/register", true); 
+	 {
+		 url= "http://register.impulse2k18.in/register"
+		 origin = "http://impulse2k18.in"
+	 }
+		 
+	 xhttp.open("POST", url, true);
+	 console.log(url);
 	 xhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
 	  console.log(this.responseText);//Need to wait till the server req is completed else it is sending in complete req so heroku is not geting complete things
-  }
+  	if(this.responseText == "REGISTRATION SUCCESSFUL")
+		{
+			alert("Thank you! Your Registration has been Recorded!"); 
+			window.location = 'home.html';
+		}
+		else
+			alert("Sorry But Something Went Wrong while we tried registering you request");
+	}
 };
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	 if(window.location.href.includes(".in"))
-	xhttp.setRequestHeader("Origin","http://impulse2k18.in");
-	 else
-		 xhttp.setRequestHeader("Origin","http://impulse2k18.cf");
+	xhttp.setRequestHeader("Origin",origin);
   xhttp.setRequestHeader("Access-Control-Allow-Origin","*");
 	xhttp.send("name="+name+"&eventName="+eventid+"&email="+email+"&PhoneNumber="+pn+"&collegeName="+cn);
-	alert("Thank you! Your Registration has been Recorded!"); 
-	window.location = 'home.html';
 }		
 	
 </script>
