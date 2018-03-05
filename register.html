@@ -115,6 +115,7 @@
 	else
 		window.history.back();document.write(eventname_desc[eventtag].name);
 	 $("#eventId").val(eventname_desc[eventtag].name);
+	localStorage.setItem("eventName", eventname_desc[eventtag].name);
 	document.body.innerHTML = document.body.innerHTML.replace("{{eventname}}", eventname_desc[eventtag].name);
 
 //Register
@@ -129,12 +130,8 @@
 //   });
 // });
  function register() {
-	var xhttp = new XMLHttpRequest();
-	 var events = window.location.href.split("#");
-	if (events.length == 2 && (events[1] in eventname_desc))
-		eventtag = events[1];
  	var name =document.getElementById("name").value;
-   var eventid = eventname_desc[eventtag].name;
+   var eventid = localStorage.getItem("eventName").toString();
    var email = document.getElementById("email").value;
    var pn = document.getElementById("pn").value;
    var cn = document.getElementById("cn").value;
