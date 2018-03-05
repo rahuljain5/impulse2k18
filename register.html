@@ -149,14 +149,15 @@
 	 console.log(url);
 	 xhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
-	  console.log(this.responseText);//Need to wait till the server req is completed else it is sending in complete req so heroku is not geting complete things
+		//Wait for Backend Response
+	  console.log(this.responseText);
   	if(this.responseText == "REGISTRATION SUCCESSFUL")
 		{
 			alert("Thank you! Your Registration has been Recorded!"); 
 			window.location = 'home.html';
 		}
 		else
-			alert("Sorry But Something Went Wrong while we tried registering you request");
+			alert("Sorry But Something Went Wrong while we tried register");
 	}
 };
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
