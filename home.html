@@ -242,7 +242,7 @@ L13.2,2.9z" />
 									</div>`;
 			txt= txt.replace("{{title}}",value.name);
 			txt = txt.replace("{{elemid}}",key);
-			txt = txt.replace("{{img_uri}}","/img/"+value.img);
+			txt = txt.replace("{{img_uri}}","img/"+value.img);
 			elem.innerHTML = txt;//(doc.firstChild);
 			list.appendChild(elem);	
 		}
