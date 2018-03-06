@@ -6,6 +6,13 @@ var eventname_desc = {
         fee: "50",
         coordinator: " Anshu Agarwal- +91 9901652821<br/>Sheza Ilussian - +91 9611861490" 
     },
+    gaming: {
+        name: "Gaming",
+        desc: "<li>Team Size: 2 (MiniMilitia)<br/>5 (Counter Strike)<br/>1 (NFS and FIFA).</li><li>Save your Spot & Register once to take part in as many number of Games as you want.</li><li>FIFA Game mode:”KICK OFF”.</li><li>No mods, pro-pack or cracked apk allowed for Mini Militia.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
+        img: "",
+        fee: "MM &amp; FIFA :100,NFS :50, CS :250",
+        coordinator: "Rakshith - +91 8861323937<br/>Amith - +91 7259643271" 
+    },
     hot_wheels: {
         name: "Hot Wheels",
         desc: "<li>Three Members per team are allowed.</li><li>Model build should meet the provided dimensions</li><li>Only provided materials should be used</li><li>Model should be build within the time limit of 90 minutes.</li><li>Your model will be tested for 3 minutes and best time will be recorded. </li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
@@ -16,7 +23,7 @@ var eventname_desc = {
     web_design: {
         name: "Web Weaver",
         desc: "<li>Two Members per team are allowed.</li><li></li><li></li><li></li><li> </li><li></li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
-        img: "web design.jpg",
+        img: "",
         fee: "100"
     },
     technovation: {
@@ -25,6 +32,13 @@ var eventname_desc = {
         img: "",
         fee: "100",
         coordinator: "Prateeksha G - +91 9482219230<br/>Divya S - +91 9986603353" 
+    },
+    namma_bhaashe_kannada: {
+        name: "Namma Bhaashe Kannada",
+        desc: "<li>Two Members per team are allowed.</li><li>Event consists of 5 rounds.</li><li>Gadgets are not allowed.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
+        img: "",
+        fee: "100",
+        coordinator: "Meghana GM - +91 9066854616" 
     },
     unknow_it: {
         name: "Un-Know It",
@@ -39,6 +53,13 @@ var eventname_desc = {
         img: "",
         fee: "50",
         coordinator: "Pooja M R - +91 8861819652<br/>Akshay Shetty - +91 8971331533" 
+    },
+    buzzinga: {
+        name: "Game of Thrones",
+        desc: "<li>Solo Event.</li><li>Rules will be given based on the task.</li><li>Participants must be ready to take up any kind of task given to them by the organisers.</li><li>Only one winner will be given the title “Star of Impulse” and be given the throne.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
+        img: "",
+        fee: "100",
+        coordinator: "Sijo - +91 8553794976<br/>Arjun - +91 7406232268" 
     },
     devil_seague: {
         name: "Devil Seague",
@@ -116,26 +137,5 @@ var eventname_desc = {
         img: "",
         fee: "250",
         coordinator: " Manoj S -  +91 8050402005<br/>Ashwin -  +91 9035811476" 
-    },
-    namma_bhaashe_kannada: {
-        name: "Namma Bhaashe Kannada",
-        desc: "<li>Two Members per team are allowed.</li><li>Event consists of 5 rounds.</li><li>Gadgets are not allowed.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
-        img: "kannadinga.jpg",
-        fee: "100",
-        coordinator: "Meghana GM - +91 9066854616" 
-    },
-    gaming: {
-        name: "Gaming",
-        desc: "<li>Team Size: 2 (MiniMilitia)<br/>5 (Counter Strike)<br/>1 (NFS and FIFA).</li><li>Save your Spot & Register once to take part in as many number of Games as you want.</li><li>FIFA Game mode:”KICK OFF”.</li><li>No mods, pro-pack or cracked apk allowed for Mini Militia.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
-        img: "gaming.jpg",
-        fee: "MM &amp; FIFA :100,NFS :50, CS :250",
-        coordinator: "Rakshith - +91 8861323937<br/>Amith - +91 7259643271" 
-    },
-    buzzinga: {
-        name: "Game of Thrones",
-        desc: "<li>Solo Event.</li><li>Rules will be given based on the task.</li><li>Participants must be ready to take up any kind of task given to them by the organisers.</li><li>Only one winner will be given the title “Star of Impulse” and be given the throne.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
-        img: "buzzinga.jpg",
-        fee: "100",
-        coordinator: "Sijo - +91 8553794976<br/>Arjun - +91 7406232268" 
     }
 };
