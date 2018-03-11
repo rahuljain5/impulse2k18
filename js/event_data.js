@@ -1,7 +1,7 @@
 var eventname_desc = {
     gear_up: {
         name: "Gear Up!",
-        desc: "<li>This is a solo event</li><li>Round -1 Objective, Fun, Aptitude test</li><li>Round-2: Group discussion in front of Professionals that is called turn coat     •Round-3: \"Ship Wreck\"- we make ship to sink and you have to save it. App God\"-Bc Eminem of technology & showcase your app talent.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Decision of the judge must be respected and is FINAL.</li>",
+        desc: "<li>This is a solo event</li><li>Round -1 Objective, Fun, Aptitude test</li><li>Round-2: Group discussion in front of Professionals that is called turn coat </li> <li>Round-3: \"Ship Wreck\"- we make ship to sink and you have to save it. App God\"-Bc Eminem of technology & showcase your app talent.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Decision of the judge must be respected and is FINAL.</l>",
         img: "gear_up.jpg",
         fee: "50",
         coordinator: " Anshu Agarwal- +91 9901652821<br/>Sheza Ilussian - +91 9611861490" 
@@ -24,7 +24,8 @@ var eventname_desc = {
         name: "Web Weaver",
         desc: "<li>Two Members per team are allowed.</li><li></li><li></li><li></li><li> </li><li></li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
         img: "webweaver.jpg",
-        fee: "100"
+        fee: "100",
+        coordinator: "Naveen - +91 88922 68536" 
     },
     technovation: {
         name: "Technovation",
@@ -38,7 +39,7 @@ var eventname_desc = {
         desc: "<li>Two Members per team are allowed.</li><li>Event consists of 5 rounds.</li><li>Gadgets are not allowed.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
         img: "nbk.jpg",
         fee: "100",
-        coordinator: "Meghana GM - +91 9066854616" 
+        coordinator: "Adarsh - +91 88806 09010<br/>Sudarshan - +91 95355 14688" 
     },
     unknow_it: {
         name: "Un-Know It",
@@ -73,7 +74,7 @@ var eventname_desc = {
         desc: "<li>Three Members per team are allowed.</li><li>You can get N number of Popsicle sticks, glue, thread and newspapers and make use of it.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
         img: "construct.jpg",
         fee: "150",
-        coordinator: "" 
+        coordinator: "Charan - +91 97408 27050<br/>NandaKumar - +91 77958 03937 " 
     },
     oxford_roadies: {
         name: "Oxford Roadies",
@@ -122,14 +123,14 @@ var eventname_desc = {
         desc: "<li>Two Members per team are allowed.</li><li>The collage is to be made in A2 size chart papers</li><li>No print outs and written words to be used.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
         img: "montage.jpg",
         fee: "50",
-        coordinator: "" 
+        coordinator: "Dinesh - +91 85531 60152<br/>Akash - +91 78990 11580" 
     },
     treasure_hunt: {
         name: "Treasure Hunt",
         desc: "<li>Two Members per team are allowed.</li><li></li><li></li><li></li><li> </li><li></li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
         img: "treasurehunt.jpg",
         fee: "100",
-        coordinator: "" 
+        coordinator: "Naveen M - +91 88922 68536" 
     },
     movie_making: {
         name: "Roll Camera Action",
