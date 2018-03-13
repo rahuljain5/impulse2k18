@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({
     extended: true
   }));
 app.use(bodyParser.json());
-app.get("/",function(req,res){
+app.all("/",function(req,res){
 	res.send("UP");
 });
 app.use(function(req, res, next) {
@@ -22,9 +22,7 @@ app.post("/register", function(req, res) {
     res.send(val);
   });
 });
-app.delete("/",function(req,res){
-	res.send("PASS A ID");
-})
+
 app.delete("/:id",function(req,res){
 req.body.id = req.params.id;
 deleterec(req.body,(val) =>{
