@@ -24,7 +24,7 @@ app.post("/register", function(req, res) {
 })
 app.delete("/:id",function(req,res){
 req.body.id = req.params.id;
-delete(req.body,(val) =>{
+deleterec(req.body,(val) =>{
 	res.send(val);
 })
 const register = (state, callback) => {
@@ -37,7 +37,7 @@ const register = (state, callback) => {
     callback("REGISTRATION FAILED")
   })
 }
-const delete = (state, callback) => {
+const deleterec = (state, callback) => {
   if(state.id){	
   models.User.destroy({
   where: {
