@@ -13,12 +13,7 @@ const mailcontent = `<!DOCTYPE html><html><head>
   </body>
 </html>`;
 
-const mailinglist = {
-"coding":["rjain.rahul5+coding@gmail.com","shubham.399+coding@gmail.com"],
-"it_quiz":["rjain.rahul5+it_quiz@gmail.com","shubham.399+it_quiz@gmail.com"]
-
-}
 
 
 exports.content = mailcontent;
-exports.bcclist = mailinglist;
+
