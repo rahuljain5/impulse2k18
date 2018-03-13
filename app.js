@@ -41,7 +41,7 @@ const deleterec = (state, callback) => {
   if(state.id){	
   models.User.destroy({
   where: {
-    id: state.id;
+    id: state.id
   }
 }).then((val) => {    
 	  callback("DELETION SUCCESSFUL")
