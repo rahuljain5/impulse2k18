@@ -4,13 +4,12 @@ var express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const content = require("./utils/constant.js").content;
-const bcc = require("./utils/constant.js").bcclist;
 const mailer = require("./services/mailer.js").sendmail;
 app.use(bodyParser.urlencoded({
     extended: true
   }));
 app.use(bodyParser.json());
-app.get("/",function(req,res){
+app.all("/",function(req,res){
 	res.send("UP");
 });
 app.use(function(req, res, next) {
@@ -22,18 +21,39 @@ app.post("/register", function(req, res) {
     register(req.body, (val) => {
     res.send(val);
   });
+});
+
+app.delete("/:id",function(req,res){
+req.body.id = req.params.id;
+deleterec(req.body,(val) =>{
+	res.send(val);
 })
+});
 const register = (state, callback) => {
   models.User.create(state).then((val) => {
 	  var mailcontent = content.replace("@@@@",state.name);
 	  mailcontent = mailcontent.replace("%%%%",state.eventName);
-	mailer(state.email,bcc[state.eventName],"Registration Successfull",mailcontent);
+	mailer(state.email,null,"Registration Successfull",mailcontent);
     callback("REGISTRATION SUCCESSFUL")
   }).catch((err) => {
     callback("REGISTRATION FAILED")
   })
 }
+const deleterec = (state, callback) => {
+  models.User.destroy({
+  where: {
+    id: state.id
+  }
+}).then((val) => {   
+		if(val)
+	  callback("DELETION SUCCESSFUL")
+		else
+		 callback("NO RECORD FOUND")
+  }).catch((err) => {
+    callback("DELETION FAILED")
+  })
+}
 
 models.sequelize.sync();
- app.listen(process.env.PORT, () => console.log("Server Started at " + process.env.PORT));
+app.listen(process.env.PORT, () => console.log("Server Started at " + process.env.PORT));
 
