@@ -50,7 +50,6 @@ const deleterec = (state, callback) => {
   }).catch((err) => {
     callback("DELETION FAILED")
   })
-  }
 }
 
 models.sequelize.sync();
