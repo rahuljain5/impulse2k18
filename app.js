@@ -22,6 +22,9 @@ app.post("/register", function(req, res) {
     res.send(val);
   });
 });
+app.delete("/",function(req,res){
+	res.send("PASS A ID");
+})
 app.delete("/:id",function(req,res){
 req.body.id = req.params.id;
 deleterec(req.body,(val) =>{
@@ -39,20 +42,17 @@ const register = (state, callback) => {
   })
 }
 const deleterec = (state, callback) => {
-  if(state.id){	
   models.User.destroy({
   where: {
     id: state.id
   }
-}).then((val) => {    
+}).then((val) => {   
+		console.log(val);
 	  callback("DELETION SUCCESSFUL")
   }).catch((err) => {
     callback("DELETION FAILED")
   })
   }
-else{
-	   callback("PASS A ID")
-}
 }
 
 models.sequelize.sync();
