@@ -21,12 +21,13 @@ app.post("/register", function(req, res) {
     register(req.body, (val) => {
     res.send(val);
   });
-})
+});
 app.delete("/:id",function(req,res){
 req.body.id = req.params.id;
 deleterec(req.body,(val) =>{
 	res.send(val);
 })
+});
 const register = (state, callback) => {
   models.User.create(state).then((val) => {
 	  var mailcontent = content.replace("@@@@",state.name);
@@ -55,5 +56,5 @@ else{
 }
 
 models.sequelize.sync();
- app.listen(process.env.PORT, () => console.log("Server Started at " + process.env.PORT));
+app.listen(process.env.PORT, () => console.log("Server Started at " + process.env.PORT));
 
