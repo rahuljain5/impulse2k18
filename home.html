@@ -135,7 +135,7 @@ L13.2,2.9z" />
 										</h2>
 									</div>
 									<h3 style="transform: matrix(1, 0, 0, 1, 0, 0);">
-										<span>By The Oxford College of Engineering, Bangalore</span>
+										<span style="font-size:x-large">The Oxford College of Engineering, Bangalore</span>
 									</h3>
 								</div>
 								<div class="hero__link__dot no-transition" style="background: maroon none repeat scroll 0% 0%; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
@@ -235,7 +235,7 @@ L13.2,2.9z" />
 												</h3>
 												<a href="#" data-dest="session">
 													<span class="" style="color:cyan;	background:rgba(0,0,0,0.7);">Discover the event</span>
-													<a onclick="window.location.href='events.html#{{elemid}}'"></a>
+													<a onclick="window.location.href='http://impulse2k18.in/events.html#{{elemid}}'"></a>
 												</a>
 											</header>
 											<div class="bg-ctn" style="background-image: url('{{img_uri}}'); background-size:cover;">
@@ -246,7 +246,7 @@ L13.2,2.9z" />
 									</div>`;
 			txt= txt.replace("{{title}}",value.name);
 			txt = txt.replace("{{elemid}}",key);
-			txt = txt.replace("{{img_uri}}","/img/"+value.img);
+			txt = txt.replace("{{img_uri}}","./img/"+value.img);
 			elem.innerHTML = txt;//(doc.firstChild);
 			list.appendChild(elem);	
 		}
