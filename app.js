@@ -57,11 +57,10 @@ const deleterec = (state, callback) => {
     id: state.id
   }
 }).then((val) => {   
-		console.log("VAL:"+val);
 		if(val)
 	  callback("DELETION SUCCESSFUL")
 		else
-		 callback("DELETION FAILED")
+		 callback("NO RECORD FOUND")
   }).catch((err) => {
     callback("DELETION FAILED")
   })
