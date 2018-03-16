@@ -1,10 +1,11 @@
 //app.js
-const models = require('./models');
+// const models = require('./models');
 var express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const content = require("./utils/constant.js").content;
 const mailer = require("./services/mailer.js").sendmail;
+const list = require("./utils/constant.js").list;
 app.use(bodyParser.urlencoded({
     extended: true
   }));
@@ -17,6 +18,13 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "access-control-allow-origin");
   next();
  });
+
+app.get("/college",function(req,res){
+	req.body.q=req.query.q;
+	getcollege(req.body,(val)=>{
+		res.send(val)
+	})
+});
 app.post("/register", function(req, res) {
     register(req.body, (val) => {
     res.send(val);
@@ -38,6 +46,10 @@ const register = (state, callback) => {
   }).catch((err) => {
     callback("REGISTRATION FAILED")
   })
+}
+const getcollege = (state,callback)=>{
+	state.q=	state.q.toLowerCase();
+	callback(list.filter(s => (s.toLowerCase().includes(state.q) && s.includes("Bangalore"))));
 }
 const deleterec = (state, callback) => {
   models.User.destroy({
