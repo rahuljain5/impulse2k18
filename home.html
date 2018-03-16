@@ -227,11 +227,6 @@ L13.2,2.9z" />
 		var value = eventname_desc[key];
 		var elem = document.createElement("LI");
 		elem.className = "sessions__item"
-		var url = "http://impulse2k18.cf/events.html#{{elemid}}";
-+	 	if(window.location.href.includes(".in"))
-+	 	{
-+		 url= "http://impulse2k18.in/events.html#{{elemid}}"
-+		 }
 		var txt = `<div class="sessions__item__wrapper">
 										<article>
 											<header>
@@ -240,7 +235,7 @@ L13.2,2.9z" />
 												</h3>
 												<a href="#" data-dest="session">
 													<span class="" style="color:cyan;	background:rgba(0,0,0,0.7);">Discover the event</span>
-													<a onclick="window.location.href='{{event_url}}'"></a>
+													<a onclick="window.location.href='http://impulse2k18.in/events.html#{{elemid}}'"></a>
 												</a>
 											</header>
 											<div class="bg-ctn" style="background-image: url('{{img_uri}}'); background-size:cover;">
@@ -250,7 +245,6 @@ L13.2,2.9z" />
 										</article>
 									</div>`;
 			txt= txt.replace("{{title}}",value.name);
-			txt = txt.replace("{{event_url}}",url);
 			txt = txt.replace("{{elemid}}",key);
 			txt = txt.replace("{{img_uri}}","./img/"+value.img);
 			elem.innerHTML = txt;//(doc.firstChild);
