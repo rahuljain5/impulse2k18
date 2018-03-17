@@ -60,7 +60,7 @@ const cleanup = (s) =>{
 	return temp.substr(1);;
 };
 const abbsearch = (s,query)=>{
-	let clgNamearr = s.split(",")[0].split(" ");
+	let clgNamearr = s.split(",")[0].split(/[ .]+/);
 	clgNamearr = clgNamearr.map(s=>s.charAt(0));
 	let apx = "";
 	for(i of clgNamearr)
