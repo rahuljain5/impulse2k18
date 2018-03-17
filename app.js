@@ -47,9 +47,16 @@ const register = (state, callback) => {
     callback("REGISTRATION FAILED")
   })
 }
+const cleanup = (s) =>{
+    	let sarr = s.split(",");
+ 	sarr = sarr.map(s=>s.trim());
+	let temp = "";
+	sarr.forEach((iteam)=>temp.concat(iteam));
+	return temp;
+};
 const getcollege = (state,callback)=>{
 	state.q=	state.q.toLowerCase();
-	list = list.map(s=>s.replace(/\"/g,"").replace(/,,/g,",").replace(/  /g," ").trim());
+	list = list.map(cleanup);
 	callback(list.filter(s => (s.toLowerCase().startsWith(state.q))));
 }
 const deleterec = (state, callback) => {
