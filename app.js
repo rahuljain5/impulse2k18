@@ -5,7 +5,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const content = require("./utils/constant.js").content;
 const mailer = require("./services/mailer.js").sendmail;
-const list = require("./utils/constant.js").list;
+var list = require("./utils/constant.js").list;
 app.use(bodyParser.urlencoded({
     extended: true
   }));
@@ -49,7 +49,8 @@ const register = (state, callback) => {
 }
 const getcollege = (state,callback)=>{
 	state.q=	state.q.toLowerCase();
-	callback(list.filter(s => (s.toLowerCase().includes(state.q) && s.includes("Bangalore"))));
+	list = list.map(s=>s.replace("\"","").replace(",,",","));
+	callback(list.filter(s => (s.toLowerCase().startsWith(state.q))));
 }
 const deleterec = (state, callback) => {
   models.User.destroy({
