@@ -53,7 +53,10 @@ const cleanup = (s) =>{
 	sarr = sarr.map(s=>s.replace(/\"/g,""))
 	let temp = "";
 	for(item of sarr)
+	{
+		if(item.length >1)
 		temp +=","+item;
+	}
 	return temp.substr(1);;
 };
 const getcollege = (state,callback)=>{
