@@ -1,4 +1,10 @@
 var eventname_desc = {
+    auto_expo: {
+        name: "Auto Expo",
+        desc: "",
+        img: "autoexpo.jpeg",
+        coordinator: "<br/>Trilochan - +91 99867 06069<br/>Vijay - +91 85538 50277" 
+    },
     gear_up: {
         name: "Gear Up!",
         desc: "<li>This is a solo event</li><li>Round -1 Objective, Fun, Aptitude test</li><li>Round-2: Group discussion in front of Professionals that is called turn coat </li> <li>Round-3: \"Ship Wreck\"- we make ship to sink and you have to save it. App God\"-Bc Eminem of technology & showcase your app talent.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Decision of the judge must be respected and is FINAL.</l>",
@@ -142,7 +148,7 @@ var eventname_desc = {
     sae_exhibition: {
         name: "SAE Exhibition",
         desc: "<li>10 - 15 members in a team</li><li>Should have participated in national or international competition</li><li>Documents assisting the participation in any previous competition shloud be carried along</li><li>Briefing of technical and aesthetic specification should be done</li><li>Based on the model and year of participation,the appearing model will be judged accordingly</li><li>Stalls will be provided,need to present 15 min prior to start of the event</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
-        img: "",
+        img: "sae.jpeg",
         fee: "1000",
         coordinator: "<br/>Prathap - +91 98860 61125<br/>Trilochan - +91 99867 06069" 
     }
