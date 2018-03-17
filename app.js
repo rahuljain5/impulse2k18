@@ -49,7 +49,7 @@ const register = (state, callback) => {
 }
 const getcollege = (state,callback)=>{
 	state.q=	state.q.toLowerCase();
-	callback(list.filter(s => (s.toLowerCase().includes(state.q) && s.includes("Bangalore"))));
+	callback(list.filter(s => (s.toLowerCase().replace(",,",",").startsWith(state.q))));
 }
 const deleterec = (state, callback) => {
   models.User.destroy({
