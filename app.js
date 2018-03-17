@@ -57,6 +57,7 @@ const cleanup = (s) =>{
 const getcollege = (state,callback)=>{
 	state.q=	state.q.toLowerCase();
 	list = list.map(cleanup);
+	console.log(list[0]);
 	callback(list.filter(s => (s.toLowerCase().startsWith(state.q))));
 }
 const deleterec = (state, callback) => {
