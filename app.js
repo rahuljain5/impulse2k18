@@ -53,7 +53,8 @@ const cleanup = (s) =>{
 	let temp = "";
 	for(item of sarr)
 	{
-		temp.concat(item);
+		console.log("Item"+item);
+		temp +=item;
 	}
 	console.log(temp);
 	return temp;
