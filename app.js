@@ -50,6 +50,7 @@ const register = (state, callback) => {
 const cleanup = (s) =>{
     	let sarr = s.split(",");
  	sarr = sarr.map(s=>s.trim());
+	sarr = sarr.map(s=>s.replace(/\"/g,""))
 	let temp = "";
 	for(item of sarr)
 		temp +=","+item;
