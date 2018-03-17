@@ -47,10 +47,32 @@ const register = (state, callback) => {
     callback("REGISTRATION FAILED")
   })
 }
+const cleanup = (s) =>{
+    	let sarr = s.split(",");
+ 	sarr = sarr.map(s=>s.trim());
+	sarr = sarr.map(s=>s.replace(/\"/g,""))
+	let temp = "";
+	for(item of sarr)
+	{
+		if(item.length >1)
+		temp +=","+item;
+	}
+	return temp.substr(1);;
+};
+const abbsearch = (s,query)=>{
+	let clgNamearr = s.split(",")[0].split(/[ .]+/).map(s=>s.charAt(0));
+	let apx = "";
+	for(i of clgNamearr)
+	{
+		if(i.match(/^[a-z]+$/i))
+		   apx += i
+	}
+	return apx.startsWith(query.toUpperCase());
+}
 const getcollege = (state,callback)=>{
-	state.q=	state.q.toLowerCase();
-	list = list.map(s=>s.replace("\"","").replace(",,",","));
-	callback(list.filter(s => (s.toLowerCase().startsWith(state.q))));
+	state.q = state.q.toLowerCase();
+	list = list.map(cleanup);
+	callback(list.filter(s => (s.toLowerCase().startsWith(state.q)||abbsearch(s,state.q))));
 }
 const deleterec = (state, callback) => {
   models.User.destroy({
