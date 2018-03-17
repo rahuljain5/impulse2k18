@@ -70,7 +70,7 @@ const abbsearch = (s,query)=>{
 	return apx.startsWith(query.toUpperCase());
 }
 const getcollege = (state,callback)=>{
-	state.q=	state.q.toLowerCase();
+	state.q = state.q.toLowerCase();
 	list = list.map(cleanup);
 	callback(list.filter(s => (s.toLowerCase().startsWith(state.q)||abbsearch(s,state.q))));
 }
