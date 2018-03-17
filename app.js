@@ -69,7 +69,7 @@ const abbsearch = (s,query)=>{
 		   apx += i
 	}
 	console.warn("Apx:"+apx);
-	return apx.startsWith(query);
+	return apx.startsWith(query.toUpperCase());
 // 	let filterarr = clgNamearr.filter(s => s.startsWith(query));
 // 	console.warn("Length:"+filterarr);
 // 	if(filterarr.length >0)
