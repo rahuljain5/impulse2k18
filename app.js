@@ -51,7 +51,11 @@ const cleanup = (s) =>{
     	let sarr = s.split(",");
  	sarr = sarr.map(s=>s.trim());
 	let temp = "";
-	sarr.forEach((iteam)=>temp.concat(iteam));
+	for(item of sarr)
+	{
+		temp.concat(item);
+	}
+	console.log(temp);
 	return temp;
 };
 const getcollege = (state,callback)=>{
