@@ -120,7 +120,7 @@ var eventname_desc = {
     },
     montage: {
         name: "Montage",
-        desc: "<li>Two Members per team are allowed.</li><li>The collage is to be made in A2 size chart papers</li><li>No print outs and written words to be used.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
+        desc: "<li>Two Members per team are allowed.</li><li>The collage is to be made in A2 size chart papers</li><li>No print outs and written words to be used.</li><li>Topics:<br/>1.Transportation<br/>2.Failing World<br/>3.Demonetization</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
         img: "montage.jpg",
         fee: "50",
         coordinator: "<br/>Dinesh - +91 85531 60152<br/>Akash - +91 78990 11580" 
@@ -136,7 +136,7 @@ var eventname_desc = {
         name: "Roll Camera Action",
         desc: "<li>A team may comprise of maximum of 5 members.</li><li>Each team should present their short films on the given genre.</li><li>The Topics are: 'A Day in your life', 'Life, Technology & Social Networking'or 'Save Earth'</li><li>The film can be in any Indian languages with subtitles in English.</li><li>Duration of the short film should not be less than 5 minutes and more than 10 minutes.</li><li>Major raw shots used to make the final movie should be submitted along with the final film copy.</li><li>Each Short Film should depict its title and credits.</li><li>The Best short Films will be selected and screened during the event.</li><li>Out of the selected movies the Jury will select the top 30 films and cash prizes will be awarded and decisions of the Juries will be final.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
         img: "rollcam.png",
-        fee: "250",
+        fee: "100",
         coordinator: "<br/> Manoj S -  +91 8050402005<br/>Ashwin -  +91 9035811476" 
     },
     sae_exhibition: {
