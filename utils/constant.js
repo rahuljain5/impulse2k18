@@ -5085,7 +5085,7 @@ School,Chennai,Tamil Nadu
 Other_College,City,State
 IITM,Chennai,Tamil Nadu
 IITB,Mumbai ,Maharastra
-IITK,Kanpur,Uttar pradesh`.split("\n")
+IITK,Kanpur,Uttar pradesh`.replace("\"","").split("\n")
 
 exports.content = mailcontent;
 exports.list = list;
