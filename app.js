@@ -5,7 +5,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const content = require("./utils/constant.js").content;
 const mailer = require("./services/mailer.js").sendmail;
-const list = require("./utils/constant.js").list;
+var list = require("./utils/constant.js").list;
 app.use(bodyParser.urlencoded({
     extended: true
   }));
