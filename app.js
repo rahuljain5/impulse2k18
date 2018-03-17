@@ -59,7 +59,7 @@ const cleanup = (s) =>{
 	}
 	return temp.substr(1);;
 };
-const abbsearch(s,query){
+const abbsearch = (s,query)=>{
 	let clgNamearr = s.split(",")[0].split(" ");
 	let filterarr = clgNamearr.filter(s => s.startsWith(query));
 	if(filterarr.length >0)
