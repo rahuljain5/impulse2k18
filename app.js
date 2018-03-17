@@ -59,10 +59,19 @@ const cleanup = (s) =>{
 	}
 	return temp.substr(1);;
 };
+const abbsearch(s,query){
+	let clgNamearr = s.split(",")[0].split(" ");
+	let filterarr = clgNamearr.filter(s => s.startsWith(query));
+	if(filterarr.length >0)
+	return true;
+	else
+		return false;
+
+}
 const getcollege = (state,callback)=>{
 	state.q=	state.q.toLowerCase();
 	list = list.map(cleanup);
-	callback(list.filter(s => (s.toLowerCase().startsWith(state.q))));
+	callback(list.filter(s => (s.toLowerCase().startsWith(state.q)||abbsearch(s,state.q))));
 }
 const deleterec = (state, callback) => {
   models.User.destroy({
