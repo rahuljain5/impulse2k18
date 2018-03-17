@@ -17,7 +17,7 @@ var eventname_desc = {
         name: "Hot Wheels",
         desc: "<li>Three Members per team are allowed.</li><li>Model build should meet the provided dimensions</li><li>Only provided materials should be used</li><li>Model should be build within the time limit of 90 minutes.</li><li>Your model will be tested for 3 minutes and best time will be recorded. </li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
         img: "hotwheels.jpeg",
-        fee: "150",
+        fee: "100",
         coordinator: "<br/>Harisree V - +91 9481453996<br/>Prathap Singh - +91 9886061125" 
     },
     web_design: {
@@ -134,9 +134,16 @@ var eventname_desc = {
     },
     movie_making: {
         name: "Roll Camera Action",
-        desc: "<li>A team may comprise of maximum of 5 members.</li><li>Each team should present their short films on the given genre.</li><li>The genre will be provided to the participants 3 days in prior to the event.</li><li>The film can be in any Indian languages with subtitles in English.</li><li>Duration of the short film should not be less than 5 minutes and more than 10 minutes.</li><li>Major raw shots used to make the final movie should be submitted along with the final film copy.</li><li>Each Short Film should depict its title and credits.</li><li>The Best short Films will be selected and screened during the event.</li><li>Out of the selected movies the Jury will select the top 30 films and cash prizes will be awarded and decisions of the Juries will be final.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
+        desc: "<li>A team may comprise of maximum of 5 members.</li><li>Each team should present their short films on the given genre.</li><li>The Topics are: 'A Day in your life', 'Life, Technology & Social Networking'or 'Save Earth'</li><li>The film can be in any Indian languages with subtitles in English.</li><li>Duration of the short film should not be less than 5 minutes and more than 10 minutes.</li><li>Major raw shots used to make the final movie should be submitted along with the final film copy.</li><li>Each Short Film should depict its title and credits.</li><li>The Best short Films will be selected and screened during the event.</li><li>Out of the selected movies the Jury will select the top 30 films and cash prizes will be awarded and decisions of the Juries will be final.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
         img: "rollcam.png",
         fee: "250",
         coordinator: "<br/> Manoj S -  +91 8050402005<br/>Ashwin -  +91 9035811476" 
+    },
+    sae_exhibition: {
+        name: "SAE Exhibition",
+        desc: "<li>10 - 15 members in a team</li><li>Should have participated in national or international competition</li><li>Documents assisting the participation in any previous competition shloud be carried along</li><li>Briefing of technical and aesthetic specification should be done</li><li>Based on the model and year of participation,the appearing model will be judged accordingly</li><li>Stalls will be provided,need to present 15 min prior to start of the event</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
+        img: "",
+        fee: "1000",
+        coordinator: "<br/>Prathap - +91 98860 61125<br/>Trilochan - +91 99867 06069" 
     }
 };
