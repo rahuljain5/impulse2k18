@@ -65,7 +65,7 @@ const abbsearch = (s,query)=>{
 	let apx = "";
 	for(i of clgNamearr)
 	{
-		if(i.match(/^[a-z]+$/i)
+		if(i.match(/^[a-z]+$/i))
 		   apx += i
 	}
 	console.warn("Apx:"+apx);
