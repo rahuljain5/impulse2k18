@@ -60,23 +60,14 @@ const cleanup = (s) =>{
 	return temp.substr(1);;
 };
 const abbsearch = (s,query)=>{
-	let clgNamearr = s.split(",")[0].split(/[ .]+/);
-	clgNamearr = clgNamearr.map(s=>s.charAt(0));
+	let clgNamearr = s.split(",")[0].split(/[ .]+/).map(s=>s.charAt(0));
 	let apx = "";
 	for(i of clgNamearr)
 	{
 		if(i.match(/^[a-z]+$/i))
 		   apx += i
 	}
-	console.warn("Apx:"+apx);
 	return apx.startsWith(query.toUpperCase());
-// 	let filterarr = clgNamearr.filter(s => s.startsWith(query));
-// 	console.warn("Length:"+filterarr);
-// 	if(filterarr.length >0)
-// 	return true;
-// 	else
-// 		return false;
-
 }
 const getcollege = (state,callback)=>{
 	state.q=	state.q.toLowerCase();
