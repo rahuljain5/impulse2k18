@@ -49,7 +49,7 @@ const register = (state, callback) => {
 }
 const getcollege = (state,callback)=>{
 	state.q=	state.q.toLowerCase();
-	list = list.map(s=>s.replace("\"","").replace(",,",","));
+	list = list.map(s=>s.replace("\"","").replace(",,",",").replace("  "," "));
 	callback(list.filter(s => (s.toLowerCase().startsWith(state.q))));
 }
 const deleterec = (state, callback) => {
