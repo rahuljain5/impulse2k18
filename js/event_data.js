@@ -1,8 +1,9 @@
 var eventname_desc = {
     auto_expo: {
         name: "Auto Expo",
-        desc: "",
+        desc: "Interested in Cars and Bikes?<br/>On 22nd and 23rd March 2018 we will be conducting our latest edition of Auto-Expo which features Bike & Car manufacturers Showcasing the best from their arsenal of vehicles",
         img: "autoexpo.jpeg",
+        fee: "Contact Coordinators for This Info",
         coordinator: "<br/>Trilochan - +91 99867 06069<br/>Vijay - +91 85538 50277" 
     },
     gear_up: {
