@@ -1,11 +1,4 @@
 var eventname_desc = {
-    auto_expo: {
-        name: "Auto Expo",
-        desc: "Interested in Cars and Bikes?<br/>On 22nd and 23rd March 2018 we will be conducting our latest edition of Auto-Expo which features Bike & Car manufacturers Showcasing the best from their arsenal of vehicles",
-        img: "autoexpo.jpeg",
-        fee: "Contact Coordinators for This Info",
-        coordinator: "<br/>Trilochan - +91 99867 06069<br/>Vijay - +91 85538 50277" 
-    },
     gear_up: {
         name: "Gear Up!",
         desc: "<li>This is a solo event</li><li>Round -1 Objective, Fun, Aptitude test</li><li>Round-2: Group discussion in front of Professionals that is called turn coat </li> <li>Round-3: \"Ship Wreck\"- we make ship to sink and you have to save it. App God\"-Bc Eminem of technology & showcase your app talent.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Decision of the judge must be respected and is FINAL.</l>",
@@ -136,21 +129,14 @@ var eventname_desc = {
         name: "Treasure Hunt",
         desc: "<li>Two Members per team are allowed.</li><li></li><li></li><li></li><li> </li><li></li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
         img: "treasurehunt.jpg",
-        fee: "100",
+        fee: "200",
         coordinator: "<br/>Naveen M - +91 88922 68536" 
     },
     movie_making: {
         name: "Roll Camera Action",
         desc: "<li>A team may comprise of maximum of 5 members.</li><li>Each team should present their short films on the given genre.</li><li>The Topics are: 'A Day in your life', 'Life, Technology & Social Networking'or 'Save Earth'</li><li>The film can be in any Indian languages with subtitles in English.</li><li>Duration of the short film should not be less than 5 minutes and more than 10 minutes.</li><li>Major raw shots used to make the final movie should be submitted along with the final film copy.</li><li>Each Short Film should depict its title and credits.</li><li>The Best short Films will be selected and screened during the event.</li><li>Out of the selected movies the Jury will select the top 30 films and cash prizes will be awarded and decisions of the Juries will be final.</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
         img: "rollcam.png",
-        fee: "100",
+        fee: "250",
         coordinator: "<br/> Manoj S -  +91 8050402005<br/>Ashwin -  +91 9035811476" 
-    },
-    sae_exhibition: {
-        name: "SAE Exhibition",
-        desc: "<li>10 - 15 members in a team</li><li>Should have participated in national or international competition</li><li>Documents assisting the participation in any previous competition shloud be carried along</li><li>Briefing of technical and aesthetic specification should be done</li><li>Based on the model and year of participation,the appearing model will be judged accordingly</li><li>Stalls will be provided,need to present 15 min prior to start of the event</li><li>Any attempt to cheat will lead to disqualification.</li><li>Judges decision will be final.</li>",
-        img: "sae.jpeg",
-        fee: "1000",
-        coordinator: "<br/>Prathap - +91 98860 61125<br/>Trilochan - +91 99867 06069" 
     }
 };
